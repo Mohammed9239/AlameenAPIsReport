@@ -1,0 +1,36 @@
+@import url(../css/font-awesome.min.css);
+
+@font-face{
+    font-family: myfont;
+    src: url(../fonts/myfont.ttf); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+html,
+body {
+    color: #898989;
+    font-size: 14px;
+    font-family: myfont;
+    line-height: normal;
+    font-weight: 300;
+    overflow-x: hidden !important;
+}
+
+Label{
+    margin-left: 20px;
+}
+
+.table td, .table th{
+    padding: 0;
+    position: relative;
+}
+
+td input{
+    width: 100%;
+    height: 100%;
+}

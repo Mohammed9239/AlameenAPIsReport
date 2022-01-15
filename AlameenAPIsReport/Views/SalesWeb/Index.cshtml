@@ -1,0 +1,323 @@
+﻿
+@{
+    ViewData["Title"] = "اضافة فاتورة مبيعات";
+}
+
+<div class="full_container" style="padding: 20px;">
+    <div class="text-right">
+
+        <!-- // Information -->
+        <div class="row d-flex align-items-center">
+
+            <div class="col-md-6">
+
+                <!-- //Customer -->
+                <div class="d-flex mb-2">
+                    <Label>العميل</Label>
+                    <select class="selectpicker  form-control" asp-items="ViewBag.Cu">
+                        <option value="">اختر</option>
+                    </select>
+                </div>
+
+
+                <!-- //Currncy -->
+                <div class="row mb-2">
+
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <Label>العملة </Label>
+                            <select class="selectpicker  form-control">
+                                <option value="">اختر</option>
+                                <option value="">حضرموت</option>
+                                <option value="">عدن</option>
+                                <option value="">صنعاء</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <Label>التعادل</Label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <input type="text" value="55" class="form form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex">
+                                        <input type="text" value="888" class="form form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- //Date And Pay Type -->
+                <div class="row mb-2">
+
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <Label>التاريخ </Label>
+                            <input type="date" value="" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <Label>الدفع</Label>
+                            <select class="selectpicker  form-control">
+                                <option value="">اختر</option>
+                                <option value="">حضرموت</option>
+                                <option value="">عدن</option>
+                                <option value="">صنعاء</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- //Note -->
+                <div class="d-flex mb-2">
+                    <Label>البيان</Label>
+                    <input type="text" value="" style="width: 95%;" />
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <!-- //Store -->
+                <div class="d-flex mb-2">
+                    <Label>المستودع</Label>
+                    <input type="text" value="" style="width: 95%;" />
+                </div>
+
+                <!-- //Account -->
+                <div class="d-flex mb-2">
+                    <Label>حساب العميل</Label>
+                    <input type="text" value="" style="width: 84%;" />
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- // Table -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm" style="height: 143px; overflow-y: scroll;">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>المادة</th>
+                                    <th>الكمية</th>
+                                    <th>الوحدة</th>
+                                    <th>الافرادي</th>
+                                    <th>الاجمالي</th>
+                                </tr>
+                            </thead>
+                            <tbody style="height: 10px;">
+
+                                <tr>
+                                    <td>
+                                        <select class="selectpicker  form-control" style="width: 330px;">
+                                            <option value="">اختر</option>
+                                            <option value="">حضرموت</option>
+                                            <option value="">عدن</option>
+                                            <option value="">صنعاء</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <select class="selectpicker  form-control" style="width: 330px;">
+                                            <option value="">اختر</option>
+                                            <option value="">حضرموت</option>
+                                            <option value="">عدن</option>
+                                            <option value="">صنعاء</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <select class="selectpicker  form-control" style="width: 330px;">
+                                            <option value="">اختر</option>
+                                            <option value="">حضرموت</option>
+                                            <option value="">عدن</option>
+                                            <option value="">صنعاء</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- // Table -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table_section padding_infor_info">
+                    <div class="table-responsive-sm" style="height: 143px; overflow-y: scroll;">
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>الحساب</th>
+                                    <th>الحسم</th>
+                                    <th>الحسم %</th>
+                                    <th>الاضافات</th>
+                                    <th>الاضافات %</th>
+                                    <th>البيان</th>
+                                </tr>
+                            </thead>
+                            <tbody style="height: 10px;">
+
+                                <tr>
+                                    <td>
+                                        <select class="selectpicker  form-control" style="width: 330px;">
+                                            <option value="">43-الحسم الممنوح</option>
+                                        </select>
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <select class="selectpicker  form-control" style="width: 330px;">
+                                            <option value="">601-ايرادات مختلفة</option>
+                                        </select>
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+
+                                    </td>
+
+                                    <td>
+                                        <input type="text" value="22" />
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- // Sum -->
+        <div class="row float-left">
+            <div class="ml-4">
+                <h3>400.00</h3>
+                <h4>المجموع</h4>
+            </div>
+            <div class="ml-4">
+                <h3>400.00</h3>
+                <h4>الاجمالي</h4>
+            </div>
+        </div>
+
+        <!-- // Button  -->
+        <div class="row">
+            <input type="submit" class="btn btn-primary btn-xs" value="اضافة" />
+            <input type="submit" class="btn btn-primary btn-xs mr-3" value="تعديل" />
+        </div>
+
+
+    </div>
+</div>
+

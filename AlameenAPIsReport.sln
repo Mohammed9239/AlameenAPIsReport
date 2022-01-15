@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlameenAPIsReport", "AlameenAPIsReport\AlameenAPIsReport.csproj", "{63960EBD-7F8B-4317-8608-0469729C35AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63960EBD-7F8B-4317-8608-0469729C35AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63960EBD-7F8B-4317-8608-0469729C35AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63960EBD-7F8B-4317-8608-0469729C35AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63960EBD-7F8B-4317-8608-0469729C35AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C295B5F-013A-45FD-9F89-A6C118095DB5}
+	EndGlobalSection
+EndGlobal
