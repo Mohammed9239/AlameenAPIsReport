@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlameenAPIsReport.ViewModels
 {
-    public class AcSub
+    public class CheckeIsSub
     {
         public Guid Guid { get; set; }
 

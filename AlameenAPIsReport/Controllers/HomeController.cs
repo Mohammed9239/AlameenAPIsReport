@@ -115,7 +115,7 @@ namespace AlameenAPIsReport.Controllers
         [HttpGet("GetAcSub")]
         public JsonResult GetAcSub(Guid id)
         {
-            var Ac = _context.Ac000.Where(a => a.ParentGuid == id).Select(a => new AcSub {
+            var Ac = _context.Ac000.Where(a => a.ParentGuid == id).Select(a => new CheckeIsSub {
                 Guid = a.Guid,
                 Name = a.Name,
                 islast = false,
@@ -424,26 +424,34 @@ namespace AlameenAPIsReport.Controllers
         [HttpGet("GetMtSub")]
         public JsonResult GetMtSub(Guid id)
         {
-            var Gr = _context.Gr000.Where(i => i.ParentGuid == id).Select(c => new
+            var Gr = _context.Gr000.Where(i => i.ParentGuid == id).Select(c => new CheckeIsSub
             {
                 Guid = c.Guid,
                 Name = c.Name,
+                islast = false,
 
             }).ToList();
 
             if (Gr.Count > 0)
             {
-                return new JsonResult(Gr);
+                foreach (var item in Gr)
+                {
+                    if (_context.Gr000.Where(a => a.ParentGuid == item.Guid).ToList().Count == 0)
+                    {
+                        item.islast = true;
+                    }
+                }
 
+                return new JsonResult(Gr);
             }
 
             else
             {
-                var Mt = _context.Mt000.Where(i => i.GroupGuid == id).Select(c => new
+                var Mt = _context.Mt000.Where(i => i.GroupGuid == id).Select(c => new CheckeIsSub
                 {
                     Guid = c.Guid,
                     Name = c.Name,
-
+                    islast = true,
                 }).ToList();
 
                 return new JsonResult(Mt);
