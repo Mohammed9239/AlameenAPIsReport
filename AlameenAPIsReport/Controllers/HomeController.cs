@@ -555,9 +555,20 @@ namespace AlameenAPIsReport.Controllers
             var Mt = _context.Mt000.Select(c => new
             {
                 ID = c.Guid,
-                NameOfDepot = _context.St000.FirstOrDefault(i => i.Guid == _context.Ms000.FirstOrDefault(m => m.MatGuid == c.Guid).StoreGuid).Name,
+                NameOfMt = c.Name,
                 Unit = c.Unity,
-                Quantity = c.Qty,
+                NameStoreAndQun =  _context.Ms000.Where(i => i.MatGuid == c.Guid).Select(b => new
+                {
+                    Name =  _context.St000.Where(s => s.Guid == b.StoreGuid).Select(n => n.Name).FirstOrDefault(),
+                    Quantity = b.Qty
+                }).ToList(),
+
+
+                //NameStoreAndQun = new
+                //{
+                //    Name = _context.St000.Where(i => i.Guid == _context.Ms000.FirstOrDefault(i => i.MatGuid == c.Guid).StoreGuid).Select(i => i.Name).ToList(),
+                //    Quantity = _context.Ms000.Where(i => i.MatGuid == c.Guid).Select(i => i.Qty).ToList()
+                //},
 
             }).FirstOrDefault(i => i.ID == id);
 
